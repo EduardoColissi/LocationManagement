@@ -8,7 +8,7 @@ import {
 } from "@ant-design/icons";
 import { Dropdown, Layout, Menu, Space } from "antd";
 import { useContext, useState } from "react";
-import { BsCalendarRange } from "react-icons/bs";
+import { BsCalendarRange, BsHouses } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/auth";
 import Theme from "../Theme";
@@ -90,6 +90,9 @@ const Template = (props) => {
         >
           <Menu.Item key="1" icon={<BsCalendarRange />}>
             <Link to="/periods">Períodos</Link>
+          </Menu.Item>
+          <Menu.Item key="2" icon={<BsHouses />}>
+            <Link to="/properties">Imóveis</Link>
           </Menu.Item>
         </Menu>
       </Sider>

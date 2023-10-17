@@ -16,6 +16,9 @@ import Login from "./pages/authentication/Login/Login";
 import CreatePeriod from "./pages/application/periods/CreatePeriod";
 import Periods from "./pages/application/periods/Periods";
 import EditPeriod from "./pages/application/periods/EditPeriod";
+import CreateProperty from "./pages/application/properties/CreateProperty";
+import Properties from "./pages/application/properties/Properties";
+import CreateLocation from "./pages/application/locations/CreateLocation";
 
 function App() {
   const Private = ({ children }) => {
@@ -72,6 +75,30 @@ function App() {
               element={
                 <Private>
                   <EditPeriod />
+                </Private>
+              }
+            />
+            <Route
+              path="/property/create"
+              element={
+                <Private>
+                  <CreateProperty />
+                </Private>
+              }
+            />
+            <Route
+              path="/properties"
+              element={
+                <Private>
+                  <Properties />
+                </Private>
+              }
+            />
+            <Route
+              path="/property/:id/location/create"
+              element={
+                <Private>
+                  <CreateLocation />
                 </Private>
               }
             />
